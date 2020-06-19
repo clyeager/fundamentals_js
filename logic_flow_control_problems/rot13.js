@@ -1,10 +1,10 @@
 function rot13(string) {
-var i;
-var newString = '';
+  var i;
+  var newString = '';
 
   for(i = 0; i < string.length; i++) {
     if (string[i].match(/^[a-zA-Z]+$/)) {
-      newString += calculateNewLetter(string[i]);
+      newString += findNewLetter(string[i]);
     } else {
       newString += string[i];
     }
@@ -13,7 +13,7 @@ var newString = '';
   return newString;
 }
 
-function calculateNewLetter(letter) {
+function findNewLetter(letter) {
   var newAsciiValue;
   var newLetter;
 
